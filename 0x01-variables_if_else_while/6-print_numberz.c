@@ -10,6 +10,6 @@ int main(void)
 	for (; a < 58; a++)
 		putchar(a);
 
-	putchar(a);
+	putchar(10);
 	return (0);
 }
