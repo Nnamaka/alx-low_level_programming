@@ -10,9 +10,9 @@ int main(void)
 	for (; a < 48; a++)
 	{
 		if (a < 10)
-			putchar(i + '0');
+			putchar(a + '0');
 		else if (a > 41)
-			putchar(i - 10 + 'A');
+			putchar(a - 10 + 'A');
 	}
 
 	putchar(10);
