@@ -3,7 +3,7 @@
  * main - entry
  * Return: returns 0
  */
-int main(void)
+void print_alphabet(void);
 {
 	for (char b = 'a'; b <= 'z'; b++)
 		_putchar(b);
