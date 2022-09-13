@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - Entry
  * Return: returns on success
@@ -14,6 +15,7 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
+	_putchar
 
 
 	return (0);
