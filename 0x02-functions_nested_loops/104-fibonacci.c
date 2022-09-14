@@ -1,5 +1,27 @@
 #include <stdio.h>
 /**
+ * numLength - gets the length of string
+ * @num: argument to numLength
+ * Return: returns length of num in integer
+ */
+int numLength(int num)
+{
+	int length = 0;
+
+	if (!num)
+	{
+		return (1);
+	}
+
+	while (num)
+	{
+		num = num / 10;
+		length += 1;
+	}
+
+	return (length);
+}
+/**
  * main - entry of the program
  * Return: returns 0 on success
  */
@@ -34,27 +56,4 @@ int main(void)
 		i++;
 	}
 	return (0);
-}
-
-/**
- * numLength - gets the length of string
- * @num: argument to numLength
- * Return: returns length of num in integer
- */
-int numLength(int num)
-{
-	int length = 0;
-
-	if (!num)
-	{
-		return (1);
-	}
-
-	while (num)
-	{
-		num = num / 10;
-		length += 1;
-	}
-
-	return (length);
 }
