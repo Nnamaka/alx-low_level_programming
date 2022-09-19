@@ -12,17 +12,10 @@ void rev_string(char *s)
 	for (i = 0; *(s + i); i++)
 		;
 
-	for (j = 0; i >= j; j++, i--)
+	for (j = 0; i > j; j++, i--)
 	{
-		if (i == j)
-		{
-			break;
-		}
-		else
-		{
-			temp = s[i];
-			s[i] = s[j];
-			s[j] = temp;
-		}
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
 	}
 }
