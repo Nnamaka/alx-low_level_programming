@@ -12,7 +12,8 @@ void rev_string(char *s)
 	for (i = 0; *(s + i); i++)
 		;
 
-	for (j = 0; i >= 0; j++, i--)
+	for (j = 0; i >= j; j++, i--)
+	{
 		if (i == j)
 		{
 			break;
@@ -23,4 +24,5 @@ void rev_string(char *s)
 			s[i] = s[j];
 			s[j] = temp;
 		}
+	}
 }
