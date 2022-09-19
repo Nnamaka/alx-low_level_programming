@@ -7,19 +7,30 @@
  */
 int main(void)
 {
-	int password;
-	char hold;
+	char k[200];
+	int num = 0;
+	int random = 0;
+	char *key = k;
+
 
 	srand(time(NULL));
 
-	while (password <= 2645)
+	while (num <= 2645)
 	{
-		hold = rand() % 112;
-		password *= hold;
-		putchar(hold);
+
+		random = rand() % 128;
+
+		if (random > 32)
+		{
+			*key = random;
+			key = key + 1;
+			num += random;
+		}
 	}
 
-	putchar(2772 - password);
+	*key = (2772 - num);
+	*(key + 1) = '\n';
+	printf("%s", k);
 
 	return (0);
 }
