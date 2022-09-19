@@ -18,3 +18,4 @@ void rev_string(char *s)
 
 	for (k = 0; k <= j; k++)
 		*(s + k) = temp[k];
+}
