@@ -12,6 +12,9 @@ int _atoi(char *s)
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
+		if (integer && (*(s + i) == ' '))
+			break;
+
 		if (*(s + i) == '-')
 			signvalue *= -1;
 
