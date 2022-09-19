@@ -12,9 +12,9 @@ int main(void)
 
 	srand(time(NULL));
 
-	while (password <= 2772)
+	while (password <= 2645)
 	{
-		hold = rand() % 128;
+		hold = rand() % 112;
 		password *= hold;
 		putchar(hold);
 	}
