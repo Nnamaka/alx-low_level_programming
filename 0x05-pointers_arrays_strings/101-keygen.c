@@ -1,5 +1,5 @@
 #include <time.h>
-#include <stdlib.h>
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * main - genrates a random valid password
@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	srand(time(NULL));
-
 	int password;
 	char hold;
+
+	srand(time(NULL));
 
 	while (password <= 2772)
 	{
