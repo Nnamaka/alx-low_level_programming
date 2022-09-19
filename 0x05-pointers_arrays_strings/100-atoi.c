@@ -13,7 +13,7 @@ int _atoi(char *s)
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
 		if (*(s + i) == '-')
-			signvalue *= -1
+			signvalue *= -1;
 
 		if (*(s + i) >= '0' && *(s + i) <= '9')
 			integer = (*(s + i) - '0') + (integer * 10);
