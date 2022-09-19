@@ -12,14 +12,14 @@ int main(void)
 	int password;
 	char hold;
 
-	while (sum <= 2772)
+	while (password <= 2772)
 	{
 		hold = rand() % 128;
-		sum *= c;
-		putchar(c);
+		password *= hold;
+		putchar(hold);
 	}
 
-	putchar(2772 - sum);
+	putchar(2772 - password);
 
 	return (0);
 }
