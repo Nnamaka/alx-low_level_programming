@@ -16,7 +16,7 @@ int main(void)
    * - only one statement
    * - you are not allowed to code anything else than this line of code
    */
-  for (int i = 0; i < 25; i++, p++) if (&(a[2]) == p) *p = 98;
+  for (int i = 0; i < 25; i++, p++) if (*p == 1024) *p = 98;
   /* ...so that this prints 98\n */
   printf("a[2] = %d\n", a[2]);
   return (0);
