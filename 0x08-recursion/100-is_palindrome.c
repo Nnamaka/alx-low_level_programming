@@ -22,7 +22,7 @@ int _len(char *s)
 */
 int check_palin(char *s, int begin, int end, int div)
 {
-	if ((begin == end && div != 0) || (begin == end + 1 && div == 0)
+	if ((begin == end && div != 0) || (begin == end + 1 && div == 0))
 		return (1);
 	if (s[begin] != s[end])
 		return  (0);
