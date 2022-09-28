@@ -19,7 +19,7 @@ int _sqrt(int a, unsigned int b)
  * @n: integer argument
  * Return: returns an integer value of the square root of a number
 */
-int _sqrt_recursion(unsigned int n)
+int _sqrt_recursion(int n)
 {
 	if (n <= 0)
 		return (-1);
