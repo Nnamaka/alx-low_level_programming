@@ -5,7 +5,7 @@
  * @b: integer argument
  * Return: returns value of square root of @b
 */
-int _sqrt(int a, int b)
+int _sqrt(int a, unsigned int b)
 {
 	if (a * a == b)
 		return (a);
@@ -19,9 +19,11 @@ int _sqrt(int a, int b)
  * @n: integer argument
  * Return: returns an integer value of the square root of a number
 */
-int _sqrt_recursion(int n)
+int _sqrt_recursion(unsigned int n)
 {
 	if (n <= 0)
 		return (-1);
+	if (n == 1)
+		return (1);
 	return (_sqrt((n / 2), n));
 }
