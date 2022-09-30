@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * print_name - prints the name of the program
  * @s - pointer to character string to be printed
@@ -8,22 +9,11 @@ void print_name(char *s)
 {
 	int i = 0;
 
-	while (*s++)
-		i++;
-
-	while (i--)
+	while (s[i] != '\0')
 	{
-		if (s[i] == '/' || s[i] == '\\')
-			break;
-	}
-
-	while (s[i])
-	{
-		printf("%c",s[i]);
+		putchar(s[i]);
 		i++;
 	}
-
-	printf("\n");
 }
 /**
  * main - a program that prints its name
@@ -34,5 +24,8 @@ void print_name(char *s)
 int main ( int __attribute__((unused)) argc, char *argv[])
 {
 	print_name(argv[0]);
+	putchar('\n');
+
+	return (0);
 }
 
