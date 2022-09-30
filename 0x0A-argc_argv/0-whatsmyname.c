@@ -21,7 +21,7 @@ void print_name(char *s)
  * @argv: array of pointers to string values
  * Return: returns 0 for success another number for failure
 */
-int main ( int __attribute__((unused)) argc, char *argv[])
+int main(int __attribute__((unused)) argc, char *argv[])
 {
 	print_name(argv[0]);
 	putchar('\n');
