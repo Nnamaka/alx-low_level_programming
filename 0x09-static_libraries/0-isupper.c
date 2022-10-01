@@ -1,14 +1,20 @@
 #include "main.h"
-#include <ctype.h>
+
 /**
- * _isupper - checks for case of characters
- * @c: represent a single letter
- * Return: returns 1 if true and 0 if false
- */
+ * _isupper - checks if alphabet character is uppercase
+ * @c: function argument i.e input parameter
+ * Return: equals to 1 if alphabet character is uppercase otherwise 0;
+*/
+
 int _isupper(int c)
 {
-	if (isupper(c))
-		return (1);
+
+	if (c >= 'A' && c <= 'Z')
+	{
+	return (1);
+	}
 	else
-		return (0);
+	{
+	return (0);
+	}
 }

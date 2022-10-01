@@ -1,15 +1,15 @@
+#include <stdio.h>
 #include "main.h"
 /**
- * _puts - prints a string and a newline
- * @str: pointer to string
- * Return: returns nothing
+ * _puts - Print a string folllowed by a new line.
+ *
+ * @str: String to be printed
+ *
+ * Return: Nothing
  */
+
 void _puts(char *str)
 {
-	int i;
-
-	for (i = 0; *(str + i); i++)
-		_putchar(*(str + i));
-
-	_putchar('\n');
+	/*printf("%s\n", str);*/
 }
+

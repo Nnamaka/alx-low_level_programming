@@ -1,14 +1,28 @@
 #include "main.h"
+
 /**
- * _strcmp - compare two strings
- * @s1: first character string argument
- * @s2: second character string argument
- * Return: returns an int value of the diffence of disimilar charactes
+ * _strcmp - Compare two strings
+ *
+ * @s1: First string
+ *
+ * @s2: Second string
+ *
+ * Return: 0 if equal, less than 1 or greater than 1
  */
+
 int _strcmp(char *s1, char *s2)
 {
-	for (; (*s1 == *s2) && (*s1 && *s2); s1++, s2++)
-		;
+	int diff = 0;
+	int i = 0;
 
-	return (*s1 - *s2);
+	while (s1[i])
+	{
+		if (s1[i] != s2[i])
+		{
+			diff = ((s1[i] - '\0') - (s2[i] - '\0'));
+			break;
+		}
+		i++;
+	}
+	return (diff);
 }
