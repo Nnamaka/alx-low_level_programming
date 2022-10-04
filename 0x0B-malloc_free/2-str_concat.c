@@ -1,11 +1,11 @@
 #include <stdlib.h>
 /**
- * _str_concat - Concatenates two strings
+ * str_concat - Concatenates two strings
  * @s1: first string
  * @s2: second string
  * Return: returns a pointer to the concatenated string or NULL
 */
-char *_str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	int s1_len, s2_len, i, j;
 	char *join_mem;
