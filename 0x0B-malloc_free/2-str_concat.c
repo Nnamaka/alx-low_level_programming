@@ -18,13 +18,13 @@ char *str_concat(char *s1, char *s2)
 
 	s1_len = 0, s2_len = 0;
 
-	while (s1[s1_len])
+	while (s1[s1_len] != '\0')
 		s1_len++;
 
-	while (s2[s2_len])
+	while (s2[s2_len] != '\0')
 		s2_len++;
 
-	join_mem = malloc((s1_len * sizeof(*s1)) + (s2_len * sizeof(*s2)));
+	join_mem = malloc(1 + (s1_len * sizeof(*s1)) + (s2_len * sizeof(*s2)));
 
 	if (join_mem == NULL)
 		return ('\0');
