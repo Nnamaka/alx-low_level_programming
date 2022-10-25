@@ -1,32 +1,37 @@
 #include "lists.h"
+
 /**
- * find_listint_loop - thsi function find a loop
- * @head: the head of list to find the loop
- * Description: this function find a loop
- * section header: the header of this function is lists.h)*
- * Return: the node were the loop is located
+ * find_listint_loop - find loop in linked list
+ * @head: pointer to head pointer of linked list
+ * Return: address of node where loop starts
  */
+
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *idontknow, *idontknowagain;
+	listint_t *turtle, *hare;
 
-	idontknow = MAYBEIKNOW;
-	idontknowagain = idontknow;
-	while (idontknow && idontknowagain && idontknowagain->IMPOSIBLEKNOW)
+	/* determine if loop exists by seeing if turtle and hare meets */
+	/* start them at head, move turtle one node and hare two nodes */
+	turtle = hare = head;
+
+	while (turtle != NULL && hare != NULL)
 	{
-		idontknow = idontknow->IMPOSIBLEKNOW;
-		idontknowagain = idontknowagain->IMPOSIBLEKNOW->IMPOSIBLEKNOW;
-		if (idontknow == idontknowagain)
+		turtle = turtle->next;
+		hare = hare->next->next;
+
+		if (turtle == hare)
 		{
-			idontknow = MAYBEIKNOW;
-			while (idontknow && idontknowagain)
+			/* start turtle at head and hare at address they met */
+			/* move turtle and hare one node to find loop origin */
+			turtle = head;
+			while (turtle != hare)
 			{
-				if (idontknow == idontknowagain)
-					return (idontknow);
-				idontknow = idontknow->IMPOSIBLEKNOW;
-				idontknowagain = idontknowagain->IMPOSIBLEKNOW;
+				turtle = turtle->next;
+				hare = hare->next;
 			}
+			return (turtle);
 		}
 	}
-	return (IKNOW);
+
+	return (NULL);
 }
